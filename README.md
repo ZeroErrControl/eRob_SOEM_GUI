@@ -1,78 +1,149 @@
+# SOEM EtherCAT Master Demo (eRob)
+
 ***This is an open-source demo related to the eRob product, provided solely for reference by developers. Please note that issues within the open-source project are independent of the quality of eRob products. Users are advised to exercise caution while using the demo. We are not responsible for any damage caused by improper operations. For any project errors, please raise a query in the Issues section. Collaboration and forks to resolve open-source project issues are welcome.***
 
-## Recommendations for EtherCAT Open-Source Master Users  
+## 1. Environment Setup
 
-1. **Use a Real-Time Kernel System**  
-   Ensure your operating system has a real-time kernel to guarantee consistent and precise communication.
+### Prerequisites
+- **Operating System:** Linux (recommended: Ubuntu 22.04)
+- **Compiler:** GCC (g++), CMake (>=3.10)
+- **Qt:** Qt5 (for GUI)
+- **Git**
+- **Make**
 
-2. **Isolate CPU Cores**  
-   Perform CPU isolation to dedicate specific cores to EtherCAT processes, reducing interruptions and improving stability.
+### Install Dependencies (Ubuntu Example)
+```bash
+sudo apt update
+sudo apt install -y build-essential cmake qtbase5-dev qt5-qmake git
+```
 
-3. **Troubleshooting OP State Issues**  
-   - Failure to enter OP state may be caused by errors in the **object dictionary mapping** or improper configuration of **DC (Distributed Clock) mode**.  
-   - **eRob** only supports **DC mode**, and proper configuration of DC mode is crucial for system synchronization and precision.
+> **Tip:** For real-time EtherCAT operation, it is recommended to use a real-time Linux kernel and isolate CPU cores for EtherCAT tasks.
 
-4. **Read Mode-Specific Instructions**  
-   Before using each mode, read the relevant operational instructions to ensure correct configuration and usage.
+## 2. Build/Compile
 
-5. **Use the Official eRob Upper Computer Software**  
-   eRob provides official upper computer software. Mastering the built-in **oscilloscope tool** will allow you to quickly locate issues with the EtherCAT master.
-
-6. **Capture and Analyze EtherCAT Data**  
-   Use packet capture tools to analyze EtherCAT output and log information to identify errors.
-
-
-## Installation
-
-1. install eRob-SOEM-Linux
-``` bash
-git clone https://github.com/ZeroErrControl/eRob_SOEM_linux.git
-cd eRob_SOEM_linux
-mkdir build
-cd build
+### Clone the Repository
+```bash
+git clone https://github.com/ZeroErrControl/SOEM_GUI.git
+cd eRob_SOEM_GUI
+cd build 
 cmake ..
-make
+make -j8
+cd .. 
+cd bin/
+sudo ./ethercat_monitor
+```
+
+## 3. Usage
+
+### GUI Interface
+
+The application provides a comprehensive GUI for EtherCAT master control and monitoring:
+
+![SOEM GUI Interface](doc/images/image.png)
+
+**Main Features:**
+- **Network Settings:** Configure EtherCAT network interface
+- **Motion Control:** Real-time motor control in various modes
+- **Data Monitoring:** Live position, velocity, and torque data
+- **Status Display:** Real-time EtherCAT slave status
+- **Logging:** Comprehensive logging and error reporting
+
+### Demo Modes
+
+The application supports multiple operation modes for testing and demonstration:
+
+1. **Position Profile (PP) Mode:** Position-based motion control
+2. **Velocity Profile (PV) Mode:** Velocity-based motion control  
+3. **Torque Profile (PT) Mode:** Torque-based motion control
+4. **Cyclic Synchronous Position (CSP) Mode:** Advanced position control with motion planning
+5. **Cyclic Synchronous Velocity (CSV) Mode:** Advanced velocity control
+6. **Cyclic Synchronous Torque (CST) Mode:** Advanced torque control
+
+### Basic Usage Example
+
+```bash
+# Start the application
+sudo ./ethercat_monitor
 
 ```
 
-## Usage
-### Running demo:
-
-1. CSV mode:
-```bash
-sudo ./build/demo/eRob_CSV
+# Select network interface in GUI
+# Enable motor control
+# Choose operation mode
+# Set target values
+# Monitor real-time data
 ```
 
-2. Launch the position subscriber (PP):
-```bash
-sudo ./build/demo/eRob_PP_subscriber
-python3 src/erob_ros/src/eCoder_fake.py
+## 4. Project Structure
+
+```
+SOEM_GUI/
+├── src/                    # Source code
+│   ├── main.cpp           # Main application entry
+│   ├── ethercat/          # EtherCAT communication
+│   ├── qt_ui/             # GUI components
+│   └── algorithms/        # Motion planning algorithms
+├── include/               # Header files
+├── doc/                   # Documentation and images
+├── third_party/           # Third-party libraries (SOEM, QCustomPlot)
+└── bin/                   # Compiled binaries
 ```
 
-3. Launch the position subscriber (CSP):
-```bash
-sudo ./build/demo/eRob_CSP_subscriber
-python3 src/erob_ros/src/eCoder_fake.py
-``` 
+## 5. Troubleshooting
 
-4. Launch the cyclic synchronous position mode (CSP):
-```bash
-sudo ./build/demo/eRob_CSP
-``` 
+### Common Issues
 
-5. Launch the profile torque mode (PT):
-In this mode, we can control the torque of the servo motor and have added PDO mapping to obtain the position, speed, torque, and status word of the servo motor. 
+**Step 4 DC Configuration Hangs:**
+- Check network interface selection
+- Verify hardware connections
+- Ensure proper permissions (run with sudo)
+- Check slave device status
 
-```bash
-sudo ./build/demo/eRob_PT
-``` 
-If you want to consult the object dictionary, you can run the following command and then run `sudo ./build/test/linux/slaveinfo <ethercat_device> -map` to view the object dictionary.
+**Build Errors:**
+- Ensure all dependencies are installed
+- Check Qt5 installation
+- Verify CMake version (>=3.10)
 
+**Runtime Errors:**
+- Run with sudo for EtherCAT access
+- Check network interface configuration
+- Verify slave device compatibility
 
-6. Launch the cyclic synchronous torque mode (CST):
-In this mode, we can control the torque of the servo motor and have added PDO mapping to obtain the position, speed, torque, and status word of the servo motor. 
+### Debug Tips
 
-```bash
-sudo ./build/demo/eRob_CST
-``` 
-If you want to consult the object dictionary, you can run the following command and then run `sudo ./build/test/linux/slaveinfo <ethercat_device> -map` to view the object dictionary.
+1. **Enable Verbose Logging:** Check console output for detailed error messages
+2. **Network Interface:** Ensure correct network interface is selected
+3. **Hardware Check:** Verify EtherCAT slave connections and power
+4. **Permissions:** Run with appropriate permissions for network access
+
+## 6. FAQ
+
+**Q: Why does the application need sudo?**
+A: EtherCAT requires direct network interface access, which typically requires root privileges.
+
+**Q: Which network interface should I select?**
+A: Choose the physical network interface connected to your EtherCAT network, not loopback or wireless interfaces.
+
+**Q: How do I know if my EtherCAT slave is compatible?**
+A: The application supports standard EtherCAT slaves. Check the slave's documentation for compatibility.
+
+## 7. Contributing
+
+We welcome contributions! Please:
+
+1. Fork the repository
+2. Create a feature branch
+3. Make your changes
+4. Submit a pull request
+
+For bug reports, please use the Issues section with detailed information about your environment and the problem encountered.
+
+## 8. Community & Support
+
+- **Issues:** [GitHub Issues](https://github.com/ZeroErrControl/SOEM_GUI/issues)
+- **Documentation:** Check the `doc/` directory for detailed documentation
+- **SOEM Library:** [SOEM Documentation](https://openethercatsociety.github.io/soem/)
+
+---
+
+**Note:** This is a demonstration project. For production use, ensure proper testing and validation of your specific hardware configuration.
