@@ -65,8 +65,6 @@ The application supports multiple operation modes for testing and demonstration:
 # Start the application
 sudo ./ethercat_monitor
 
-```
-
 # Select network interface in GUI
 # Enable motor control
 # Choose operation mode
@@ -123,9 +121,6 @@ A: EtherCAT requires direct network interface access, which typically requires r
 
 **Q: Which network interface should I select?**
 A: Choose the physical network interface connected to your EtherCAT network, not loopback or wireless interfaces.
-
-**Q: How do I know if my EtherCAT slave is compatible?**
-A: The application supports standard EtherCAT slaves. Check the slave's documentation for compatibility.
 
 ## 7. Contributing
 
