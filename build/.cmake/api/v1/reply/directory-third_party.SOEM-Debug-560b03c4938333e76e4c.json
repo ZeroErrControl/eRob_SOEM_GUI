@@ -1,0 +1,72 @@
+{
+	"backtraceGraph" : 
+	{
+		"commands" : 
+		[
+			"install"
+		],
+		"files" : 
+		[
+			"third_party/SOEM/CMakeLists.txt"
+		],
+		"nodes" : 
+		[
+			{
+				"file" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 43,
+				"parent" : 0
+			},
+			{
+				"command" : 0,
+				"file" : 0,
+				"line" : 49,
+				"parent" : 0
+			}
+		]
+	},
+	"installers" : 
+	[
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib",
+			"paths" : 
+			[
+				"/home/erobman/SOEM_GUI-main/lib/libsoem.so"
+			],
+			"targetId" : "soem::@080685bbdf0167e246b8",
+			"targetIndex" : 9,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 2,
+			"component" : "Unspecified",
+			"destination" : "include/soem",
+			"paths" : 
+			[
+				"third_party/SOEM/soem/ethercat.h",
+				"third_party/SOEM/soem/ethercatbase.h",
+				"third_party/SOEM/soem/ethercatcoe.h",
+				"third_party/SOEM/soem/ethercatconfig.h",
+				"third_party/SOEM/soem/ethercatconfiglist.h",
+				"third_party/SOEM/soem/ethercatdc.h",
+				"third_party/SOEM/soem/ethercateoe.h",
+				"third_party/SOEM/soem/ethercatfoe.h",
+				"third_party/SOEM/soem/ethercatmain.h",
+				"third_party/SOEM/soem/ethercatprint.h",
+				"third_party/SOEM/soem/ethercatsoe.h",
+				"third_party/SOEM/soem/ethercattype.h"
+			],
+			"type" : "file"
+		}
+	],
+	"paths" : 
+	{
+		"build" : "third_party/SOEM",
+		"source" : "third_party/SOEM"
+	}
+}

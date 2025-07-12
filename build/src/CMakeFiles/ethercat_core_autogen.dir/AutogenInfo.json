@@ -1,0 +1,201 @@
+{
+	"BUILD_DIR" : "/home/erobman/SOEM_GUI-main/build/src/ethercat_core_autogen",
+	"CMAKE_BINARY_DIR" : "/home/erobman/SOEM_GUI-main/build",
+	"CMAKE_CURRENT_BINARY_DIR" : "/home/erobman/SOEM_GUI-main/build/src",
+	"CMAKE_CURRENT_SOURCE_DIR" : "/home/erobman/SOEM_GUI-main/src",
+	"CMAKE_EXECUTABLE" : "/usr/bin/cmake",
+	"CMAKE_LIST_FILES" : 
+	[
+		"/home/erobman/SOEM_GUI-main/src/CMakeLists.txt",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5Config.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5/Qt5ModuleLocation.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Core/Qt5CoreConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Widgets/Qt5WidgetsConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5PrintSupport/Qt5PrintSupportConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Concurrent/Qt5ConcurrentConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Concurrent/Qt5ConcurrentConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Gui/Qt5GuiConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfigVersion.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5NetworkConfig.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QConnmanEnginePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QGenericEnginePlugin.cmake",
+		"/usr/lib/x86_64-linux-gnu/cmake/Qt5Network/Qt5Network_QNetworkManagerEnginePlugin.cmake",
+		"/usr/share/cmake-3.22/Modules/FindThreads.cmake",
+		"/usr/share/cmake-3.22/Modules/CheckLibraryExists.cmake",
+		"/usr/share/cmake-3.22/Modules/CheckIncludeFile.cmake",
+		"/usr/share/cmake-3.22/Modules/CheckCSourceCompiles.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPackageHandleStandardArgs.cmake",
+		"/usr/share/cmake-3.22/Modules/FindPackageMessage.cmake"
+	],
+	"CMAKE_SOURCE_DIR" : "/home/erobman/SOEM_GUI-main",
+	"DEP_FILE" : "/home/erobman/SOEM_GUI-main/build/src/ethercat_core_autogen/deps",
+	"DEP_FILE_RULE_NAME" : "ethercat_core_autogen/timestamp",
+	"HEADERS" : 
+	[
+		[
+			"/home/erobman/SOEM_GUI-main/include/ethercat_thread.h",
+			"MU",
+			"DGKZTCOIDE/moc_ethercat_thread.cpp",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/include/monitor_window.h",
+			"MU",
+			"DGKZTCOIDE/moc_monitor_window.cpp",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/include/qt_ui/control/mode_manager.h",
+			"MU",
+			"AHENG4GZTA/moc_mode_manager.cpp",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/include/qt_ui/control/motor_controller.h",
+			"MU",
+			"AHENG4GZTA/moc_motor_controller.cpp",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/include/qt_ui/logging/log_manager.h",
+			"MU",
+			"5Z4KI3LAZL/moc_log_manager.cpp",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/include/qt_ui/monitor_window_data.h",
+			"MU",
+			"SA5R2QOQMW/moc_monitor_window_data.cpp",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/include/qt_ui/monitor_window_events.h",
+			"MU",
+			"SA5R2QOQMW/moc_monitor_window_events.cpp",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/include/qt_ui/network/network_manager.h",
+			"MU",
+			"VQ2MM7JVML/moc_network_manager.cpp",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/include/qt_ui/plot/plot_manager.h",
+			"MU",
+			"XN3T3JUYMP/moc_plot_manager.cpp",
+			null
+		]
+	],
+	"HEADER_EXTENSIONS" : [ "h", "hh", "h++", "hm", "hpp", "hxx", "in", "txx" ],
+	"INCLUDE_DIR" : "/home/erobman/SOEM_GUI-main/build/src/ethercat_core_autogen/include",
+	"MOC_COMPILATION_FILE" : "/home/erobman/SOEM_GUI-main/build/src/ethercat_core_autogen/mocs_compilation.cpp",
+	"MOC_DEFINITIONS" : 
+	[
+		"QT_CONCURRENT_LIB",
+		"QT_CORE_LIB",
+		"QT_GUI_LIB",
+		"QT_PRINTSUPPORT_LIB",
+		"QT_WIDGETS_LIB",
+		"ethercat_core_EXPORTS"
+	],
+	"MOC_DEPEND_FILTERS" : 
+	[
+		[
+			"Q_PLUGIN_METADATA",
+			"[\n][ \t]*Q_PLUGIN_METADATA[ \t]*\\([^\\)]*FILE[ \t]*\"([^\"]+)\""
+		]
+	],
+	"MOC_INCLUDES" : 
+	[
+		"/home/erobman/SOEM_GUI-main/include",
+		"/home/erobman/SOEM_GUI-main/third_party/SOEM",
+		"/home/erobman/SOEM_GUI-main/third_party/SOEM/soem",
+		"/home/erobman/SOEM_GUI-main/third_party/SOEM/osal",
+		"/home/erobman/SOEM_GUI-main/third_party/SOEM/osal/linux",
+		"/home/erobman/SOEM_GUI-main/third_party/SOEM/oshw/linux",
+		"/home/erobman/SOEM_GUI-main/include/qt_ui",
+		"/home/erobman/SOEM_GUI-main/include/qt_ui/components",
+		"/home/erobman/SOEM_GUI-main/include/qt_ui/plot",
+		"/home/erobman/SOEM_GUI-main/include/qt_ui/control",
+		"/home/erobman/SOEM_GUI-main/include/qt_ui/network",
+		"/home/erobman/SOEM_GUI-main/include/qt_ui/logging",
+		"/home/erobman/SOEM_GUI-main/third_party/qcustomplot",
+		"/home/erobman/SOEM_GUI-main/include/algorithms",
+		"/usr/include/x86_64-linux-gnu/qt5",
+		"/usr/include/x86_64-linux-gnu/qt5/QtCore",
+		"/usr/lib/x86_64-linux-gnu/qt5/mkspecs/linux-g++",
+		"/usr/include/x86_64-linux-gnu/qt5/QtWidgets",
+		"/usr/include/x86_64-linux-gnu/qt5/QtGui",
+		"/usr/include/x86_64-linux-gnu/qt5/QtConcurrent",
+		"/usr/include/x86_64-linux-gnu/qt5/QtPrintSupport",
+		"/usr/include/c++/10",
+		"/usr/include/x86_64-linux-gnu/c++/10",
+		"/usr/include/c++/10/backward",
+		"/usr/lib/gcc/x86_64-linux-gnu/10/include",
+		"/usr/local/include",
+		"/usr/include/x86_64-linux-gnu",
+		"/usr/include"
+	],
+	"MOC_MACRO_NAMES" : [ "Q_OBJECT", "Q_GADGET", "Q_NAMESPACE", "Q_NAMESPACE_EXPORT" ],
+	"MOC_OPTIONS" : [],
+	"MOC_PATH_PREFIX" : false,
+	"MOC_PREDEFS_CMD" : 
+	[
+		"/usr/bin/g++-10",
+		"-dM",
+		"-E",
+		"-c",
+		"/usr/share/cmake-3.22/Modules/CMakeCXXCompilerABI.cpp"
+	],
+	"MOC_PREDEFS_FILE" : "/home/erobman/SOEM_GUI-main/build/src/ethercat_core_autogen/moc_predefs.h",
+	"MOC_RELAXED_MODE" : false,
+	"MOC_SKIP" : [],
+	"MULTI_CONFIG" : false,
+	"PARALLEL" : 24,
+	"PARSE_CACHE_FILE" : "/home/erobman/SOEM_GUI-main/build/src/CMakeFiles/ethercat_core_autogen.dir/ParseCache.txt",
+	"QT_MOC_EXECUTABLE" : "/usr/lib/qt5/bin/moc",
+	"QT_UIC_EXECUTABLE" : "/usr/lib/qt5/bin/uic",
+	"QT_VERSION_MAJOR" : 5,
+	"QT_VERSION_MINOR" : 15,
+	"SETTINGS_FILE" : "/home/erobman/SOEM_GUI-main/build/src/CMakeFiles/ethercat_core_autogen.dir/AutogenUsed.txt",
+	"SOURCES" : 
+	[
+		[ "/home/erobman/SOEM_GUI-main/src/ethercat/dc_manager.cpp", "MU", null ],
+		[
+			"/home/erobman/SOEM_GUI-main/src/ethercat/ethercat_manager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/src/ethercat/ethercat_thread.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/src/ethercat/pdo_manager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/src/ethercat/sdo_manager.cpp",
+			"MU",
+			null
+		],
+		[
+			"/home/erobman/SOEM_GUI-main/src/qt_ui/components/component_manager.cpp",
+			"MU",
+			null
+		]
+	],
+	"UIC_OPTIONS" : [],
+	"UIC_SEARCH_PATHS" : [],
+	"UIC_SKIP" : [],
+	"UIC_UI_FILES" : [],
+	"VERBOSITY" : 0
+}
